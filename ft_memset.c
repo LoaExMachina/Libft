@@ -6,33 +6,37 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 15:46:44 by spitte            #+#    #+#             */
-/*   Updated: 2026/10/20 12:09:46 by spitte           ###   ########.fr       */
+/*   Updated: 2026/10/22 11:38:01 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_memset(int *s, int c, int n)
-{
-	int	i;
+#include <string.h>
 
+void	*ft_memset(void *s, int c, size_t n)
+{
+	size_t			i;
+	unsigned char	*tab;
+
+	tab = (unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{
-		s[i] = c;
+		tab[i] = (unsigned char)c;
 		i++;
 	}
+	return (s);
 }
-//#include <stdio.h>
 //#include <stdlib.h>
-//int main(int argc, char** argv)
+//#include <stdio.h>
+//int main()
 //{
-//	(void)argc;
-//	int a[3]={0, 0, 0};
-//	ft_memset(a, atoi(&argv[1][0]), atoi(&argv[2][0]));
+//	char a[]= "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+//	ft_memset(a,'6',3);
 //	int i;
 //	i=0;
-//	while (a[i]!=0)
+//	while (a[i])
 //	{
-//		printf("%d",a[i]);
+//		printf("%c",a[i]);
 //		i++;
 //	}
 //
