@@ -6,7 +6,7 @@
 /*   By: spitte <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/17 11:56:04 by spitte            #+#    #+#             */
-/*   Updated: 2026/07/25 15:35:44 by spitte           ###   ########.fr       */
+/*   Updated: 2026/10/26 14:53:22 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@ int	ft_atoi(char *str)
 	i = 0;
 	nb = 0;
 	order = 1;
-	while (str[i] == 32 || str[i] == '\f' || str[i] == '\n' || str[i] == '\r'
-		|| str[i] == '\t' || str[i] == '+' || str[i] == '\v' || str[i] == '-')
+	while (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == '-')
 			order = order * (-1);
@@ -39,13 +38,14 @@ int	ft_atoi(char *str)
 	return (nb);
 }
 
-//int	main()
 //#include <stdio.h>
+//int	main()
 //{
 //	printf("%d", ft_atoi("100"));
 //	printf("\n%d", ft_atoi("90"));
 //	printf("\n%d", ft_atoi("5"));
-//	//printf("\n%d", ft_atoi("abc"));
 //	printf("\n%d", ft_atoi("0100"));
+//	printf("\n%d", ft_atoi("2147483647"));
+//	printf("\n%d", ft_atoi("-2147483648"));
 //	printf("\n%d", ft_atoi("-+--+5"));
 //}
