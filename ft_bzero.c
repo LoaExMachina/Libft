@@ -6,10 +6,11 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 11:53:09 by spitte            #+#    #+#             */
-/*   Updated: 2026/10/22 12:03:44 by spitte           ###   ########.fr       */
+/*   Updated: 2026/10/28 12:48:08 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <string.h>
 
 void	*ft_bzero(void *s, size_t n)

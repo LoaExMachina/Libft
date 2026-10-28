@@ -6,10 +6,11 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 13:30:13 by spitte            #+#    #+#             */
-/*   Updated: 2026/10/22 14:16:32 by spitte           ###   ########.fr       */
+/*   Updated: 2026/10/28 12:49:27 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <string.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)

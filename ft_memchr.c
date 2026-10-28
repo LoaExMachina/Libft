@@ -6,10 +6,11 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 11:50:37 by spitte            #+#    #+#             */
-/*   Updated: 2026/10/26 12:28:59 by spitte           ###   ########.fr       */
+/*   Updated: 2026/10/28 12:49:08 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <string.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)

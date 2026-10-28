@@ -6,13 +6,15 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 14:47:56 by spitte            #+#    #+#             */
-/*   Updated: 2026/10/19 14:49:49 by spitte           ###   ########.fr       */
+/*   Updated: 2026/10/28 13:03:17 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isprint(int c)
 {
-	if ((c >= ' ') && (c <= '127'))
+	if ((c >= ' ') && (c <= 127))
 		return (1);
 	else
 		return (0);

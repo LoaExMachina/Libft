@@ -6,10 +6,11 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 15:46:44 by spitte            #+#    #+#             */
-/*   Updated: 2026/10/22 11:38:01 by spitte           ###   ########.fr       */
+/*   Updated: 2026/10/28 12:49:38 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <string.h>
 
 void	*ft_memset(void *s, int c, size_t n)

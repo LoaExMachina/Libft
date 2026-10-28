@@ -6,10 +6,11 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 13:49:10 by spitte            #+#    #+#             */
-/*   Updated: 2026/10/26 14:37:18 by spitte           ###   ########.fr       */
+/*   Updated: 2026/10/28 12:49:13 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <string.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)

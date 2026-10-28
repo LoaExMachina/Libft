@@ -6,10 +6,11 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 12:14:49 by spitte            #+#    #+#             */
-/*   Updated: 2026/10/22 12:49:16 by spitte           ###   ########.fr       */
+/*   Updated: 2026/10/28 12:49:21 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <string.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)

@@ -6,10 +6,11 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/28 10:06:03 by spitte            #+#    #+#             */
-/*   Updated: 2026/10/28 11:16:29 by spitte           ###   ########.fr       */
+/*   Updated: 2026/10/28 12:50:05 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <string.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)

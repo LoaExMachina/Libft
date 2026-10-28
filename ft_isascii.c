@@ -6,9 +6,11 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 14:34:23 by spitte            #+#    #+#             */
-/*   Updated: 2026/10/19 14:38:27 by spitte           ###   ########.fr       */
+/*   Updated: 2026/10/28 12:48:34 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

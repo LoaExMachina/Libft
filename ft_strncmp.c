@@ -6,10 +6,11 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 11:04:44 by spitte            #+#    #+#             */
-/*   Updated: 2026/10/26 11:42:29 by spitte           ###   ########.fr       */
+/*   Updated: 2026/10/28 12:50:00 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <string.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)

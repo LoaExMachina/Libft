@@ -6,10 +6,11 @@
 /*   By: spitte <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/20 13:46:28 by spitte            #+#    #+#             */
-/*   Updated: 2026/10/22 11:47:29 by spitte           ###   ########.fr       */
+/*   Updated: 2026/10/28 12:49:55 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <string.h>
 
 size_t	ft_strlen(char *str)

@@ -6,10 +6,11 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 14:23:56 by spitte            #+#    #+#             */
-/*   Updated: 2026/10/22 16:01:07 by spitte           ###   ########.fr       */
+/*   Updated: 2026/10/28 12:49:51 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <string.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
@@ -37,13 +38,13 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 //	char a[] = "aaaaaaworld";
 //	char b[] = "hello darkness my old friend";
 //	size_t n1;
-//        n1 = ft_strlcpy(a, b, 6);
+//        n1 = ft_strlcpy(a, b, 60);
 //        printf("ft:%s n:%zu\n",a,n1);
-////	size_t n2;
-////        char c[] = "aaaaaaworld";
-////        char d[] = "hello darkness my old friend";
-////        n2 = strlcpy(c, d, 6);
-////        printf("og:%s n:%zu\n",c,n2);
+//	size_t n2;
+//        char c[] = "aaaaaaworld";
+//        char d[] = "hello darkness my old friend";
+//        n2 = strlcpy(c, d, 60);
+//        printf("og:%s n:%zu\n",c,n2);
 //}
-/* compiler avec "gcc ft_strlcpy.c $(pkg-config --libs libbsd)" pour ce main,
- * autrement le strlcpy original ne marche pas */
+// /*compiler avec "gcc ft_strlcpy.c $(pkg-config --libs libbsd)" pour ce main,
+// autrement le strlcpy original ne marche pas */

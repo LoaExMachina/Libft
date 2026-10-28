@@ -6,11 +6,13 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 12:08:38 by spitte            #+#    #+#             */
-/*   Updated: 2026/10/19 13:39:23 by spitte           ###   ########.fr       */
+/*   Updated: 2026/10/28 12:48:27 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_ischar(int c)
+#include "libft.h"
+
+int	ft_isalpha(int c)
 {
 	if (((c >= 'a') && (c <= 'z')) || ((c >= 'A') && (c <= 'Z' )))
 		return (1);
@@ -21,5 +23,5 @@ int	ft_ischar(int c)
 //{
 //#include <stdio.h>
 //	(void)argc;
-//	printf("%d", ft_ischar(argv[1][0]));
+//	printf("%d", ft_isalpha(argv[1][0]));
 //}
