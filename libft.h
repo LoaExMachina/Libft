@@ -6,7 +6,7 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/28 11:24:19 by spitte            #+#    #+#             */
-/*   Updated: 2026/10/28 13:02:43 by spitte           ###   ########.fr       */
+/*   Updated: 2026/10/28 15:21:32 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
@@ -34,5 +34,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+void	*ft_calloc(size_t nmemb, size_t size);
 
 #endif // LIBFT_H
