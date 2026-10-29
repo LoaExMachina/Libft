@@ -6,7 +6,7 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 14:23:56 by spitte            #+#    #+#             */
-/*   Updated: 2026/10/28 12:49:51 by spitte           ###   ########.fr       */
+/*   Updated: 2026/10/29 11:32:34 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,12 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 			dst[i] = src[i];
 		i++;
 	}
-	if (size > i)
-		dst[i] = 0 ;
+	if (size -1 > i)
+	{
+		dst[i] = 0;
+	}
 	else
-		dst[size] = 0 ;
+		dst[size - 1] = 0 ;
 	return (i);
 }
 
@@ -35,16 +37,14 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 //#include <stdio.h>
 //int main()
 //{
-//	char a[] = "aaaaaaworld";
+//	char a[] = "abcdeworld";
 //	char b[] = "hello darkness my old friend";
 //	size_t n1;
-//        n1 = ft_strlcpy(a, b, 60);
+//        n1 = ft_strlcpy(a, b, 9);
 //        printf("ft:%s n:%zu\n",a,n1);
 //	size_t n2;
-//        char c[] = "aaaaaaworld";
+//        char c[] = "abcdeworld";
 //        char d[] = "hello darkness my old friend";
-//        n2 = strlcpy(c, d, 60);
+//        n2 = strlcpy(c, d, 9);
 //        printf("og:%s n:%zu\n",c,n2);
 //}
-// /*compiler avec "gcc ft_strlcpy.c $(pkg-config --libs libbsd)" pour ce main,
-// autrement le strlcpy original ne marche pas */
