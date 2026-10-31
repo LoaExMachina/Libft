@@ -6,7 +6,7 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 16:59:33 by spitte            #+#    #+#             */
-/*   Updated: 2026/10/29 17:47:51 by spitte           ###   ########.fr       */
+/*   Updated: 2026/10/31 11:17:55 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		j;
 
 	str = malloc((ft_strlen(s1) + 1) * sizeof(char));
-	if (!str)
+	if (!str || !s1)
 		return (NULL);
 	i = 0;
 	j = 0;
