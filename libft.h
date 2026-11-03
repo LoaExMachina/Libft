@@ -6,11 +6,11 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/28 11:24:19 by spitte            #+#    #+#             */
-/*   Updated: 2026/10/28 15:21:32 by spitte           ###   ########.fr       */
+/*   Updated: 2026/11/02 13:52:28 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
 #ifndef LIBFT_H
+# include <string.h>
 # define LIBFT_H
 
 int		ft_atoi(char *str);
@@ -28,12 +28,17 @@ void	*ft_memset(void *s, int c, size_t n);
 char	*ft_strchr(const char *s, int c);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
-size_t	ft_strlen(char *str);
+size_t	ft_strlen(const char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 void	*ft_calloc(size_t nmemb, size_t size);
+char	*ft_strdup(const char *s);
+char *ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char c);
 
 #endif // LIBFT_H
