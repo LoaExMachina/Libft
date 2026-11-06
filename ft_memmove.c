@@ -6,7 +6,7 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 13:30:13 by spitte            #+#    #+#             */
-/*   Updated: 2026/10/28 12:49:27 by spitte           ###   ########.fr       */
+/*   Updated: 2026/11/06 17:43:03 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,24 @@
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t			i;
-	unsigned char	tempo;
 	unsigned char	*s;
 	unsigned char	*d;
 
-	i = 0;
+	if (dest == src)
+		return (dest);
 	s = (unsigned char *) src;
 	d = (unsigned char *) dest;
-	while (i < n)
+	if (d > s)
 	{
-		tempo = s[i];
-		d[i] = tempo;
-		i++;
+		i = n;
+		while (i > 0)
+		{
+			i--;
+			d[i] = s[i];
+		}
 	}
+	else
+		ft_memcpy(dest,src,n);
 	return (dest);
 }
 

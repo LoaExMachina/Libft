@@ -6,7 +6,7 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 10:51:34 by spitte            #+#    #+#             */
-/*   Updated: 2026/11/06 13:16:49 by spitte           ###   ########.fr       */
+/*   Updated: 2026/11/06 16:42:10 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (lst && new)
 	{
-		new -> next = *lst;
-		lst = &new;
+		new->next = *lst;
+		*lst = new;
 	}
 }

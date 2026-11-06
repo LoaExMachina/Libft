@@ -6,7 +6,7 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 12:44:37 by spitte            #+#    #+#             */
-/*   Updated: 2026/11/06 14:23:25 by spitte           ###   ########.fr       */
+/*   Updated: 2026/11/06 17:03:07 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,18 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*current;
+	t_list	*last;
 
 	if (lst && new)
 	{
-		current = lst[0];
-		while (current->next)
-			current = current->next;
-		current -> next = new;
+		if (!(*lst))
+		{
+			*lst = new;
+		}
+		else
+		{
+			last = ft_lstlast(*lst);
+			last->next = new;
+		}
 	}
 }

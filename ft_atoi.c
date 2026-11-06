@@ -6,13 +6,11 @@
 /*   By: spitte <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/17 11:56:04 by spitte            #+#    #+#             */
-/*   Updated: 2026/10/26 14:53:22 by spitte           ###   ########.fr       */
+/*   Updated: 2026/11/06 17:08:15 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	order;
