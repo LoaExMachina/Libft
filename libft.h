@@ -6,12 +6,18 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/28 11:24:19 by spitte            #+#    #+#             */
-/*   Updated: 2026/11/03 17:49:36 by spitte           ###   ########.fr       */
+/*   Updated: 2026/11/06 10:17:25 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
 # include <string.h>
 # define LIBFT_H
+
+typedef struct t_list
+{
+	void			*content;
+	struct t_list	*next;
+}			t_list;
 
 int		ft_atoi(char *str);
 void	*ft_bzero(void *s, size_t n);
