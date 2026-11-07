@@ -6,7 +6,7 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/28 10:06:03 by spitte            #+#    #+#             */
-/*   Updated: 2026/10/28 12:50:05 by spitte           ###   ########.fr       */
+/*   Updated: 2026/11/07 13:04:48 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,24 +17,20 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
-	char	*nihil;
 
-	nihil = NULL;
+	if(!(little[0]))
+		return((char *)big);
 	i = 0;
-	j = 0;
-	while (big[i] && i <= len)
+	while (big[i] && i < len)
 	{
-		if ((!j && big[i] == little[0]) || (j && big[i] == little[j]))
+		j = 0;
+		while (little[j] && i + j < len && big[i + j] == little[j])
 			j++;
-		else
-		{
-			if (little[j] == 0)
-				return (& ((char *)big)[i - j]);
-			j = 0;
-		}
+		if (!little[j])
+			return ((char *)(&big[i]));
 		i++;
 	}
-	return (nihil);
+	return (NULL);
 }
 
 //#include <bsd/string.h>

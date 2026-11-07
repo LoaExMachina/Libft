@@ -6,7 +6,7 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 16:59:33 by spitte            #+#    #+#             */
-/*   Updated: 2026/10/31 11:17:55 by spitte           ###   ########.fr       */
+/*   Updated: 2026/11/07 17:16:52 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,37 +29,25 @@ int	inset(char c, const char *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*str;
-	int		i;
-	int		j;
+	int		start;
+	int		end;
 
-	str = malloc((ft_strlen(s1) + 1) * sizeof(char));
-	if (!str || !s1)
+	if (!s1 || !set)
 		return (NULL);
-	i = 0;
-	j = 0;
-	while (inset(s1[i], set))
-		i++;
-	while (s1[i])
-	{
-		str[j] = s1[i];
-		i++;
-		j++;
-	}
-	j--;
-	while (inset(str[j], set))
-	{
-		str[j] = 0;
-		j--;
-	}
-	return (str);
+	start = 0;
+	while (s1[start] && inset(s1[start], set))
+		start++;
+	end = ft_strlen(s1);
+	while (end > start && inset(s1[end - 1], set))
+		end--;
+	return (ft_substr(s1, start, end - start));
 }
 
 //#include <stdio.h>
 //#include <assert.h>
 //int main()
 //{
-//	char *a = "";
+//	char *a = "acabweshweshacab";
 //	const char *b = "abc";
 //	printf("%s", ft_strtrim(a,b));
 //

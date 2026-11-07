@@ -6,7 +6,7 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 11:23:29 by spitte            #+#    #+#             */
-/*   Updated: 2026/11/06 16:38:09 by spitte           ###   ########.fr       */
+/*   Updated: 2026/11/07 10:07:06 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,3 @@ int	ft_lstsize(t_list *lst)
 //{
 //	t_list *ls = ft_lstnew("hello");
 //	printf("%d",ft_li
-

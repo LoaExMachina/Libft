@@ -6,7 +6,7 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 14:23:56 by spitte            #+#    #+#             */
-/*   Updated: 2026/10/29 11:32:34 by spitte           ###   ########.fr       */
+/*   Updated: 2026/11/07 11:33:50 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,17 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 
+	if (size == 0)
+		return (ft_strlen(src));
 	i = 0;
-	while (src[i])
+	while (src[i] && i < size -1)
 	{
 		if (i < size - 1)
 			dst[i] = src[i];
 		i++;
 	}
-	if (size -1 > i)
-	{
-		dst[i] = 0;
-	}
-	else
-		dst[size - 1] = 0 ;
-	return (i);
+	dst[i] = 0;
+	return (ft_strlen(src));
 }
 
 //#include <bsd/string.h>

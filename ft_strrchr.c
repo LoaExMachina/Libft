@@ -6,7 +6,7 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 09:53:49 by spitte            #+#    #+#             */
-/*   Updated: 2026/10/26 10:58:12 by spitte           ###   ########.fr       */
+/*   Updated: 2026/11/07 10:37:15 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		i;
+	size_t	i;
 	char	*ptr;
 
-	ptr = 0;
+	ptr = NULL;
+	c = c % 256;
 	i = 0;
-	while (s[i])
+	while (i <= ft_strlen(s))
 	{
 		if (s[i] == c)
 			ptr = (char *)&s[i];

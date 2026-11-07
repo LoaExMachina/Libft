@@ -6,7 +6,7 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 14:50:47 by spitte            #+#    #+#             */
-/*   Updated: 2026/11/03 17:33:36 by spitte           ###   ########.fr       */
+/*   Updated: 2026/11/07 15:49:25 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,22 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*ptr;
+	size_t	lens;
+	size_t	sublen;
 
 	if (!s)
 		return (NULL);
-	ptr = malloc((len + 1) * sizeof(char));
-	ft_strlcpy(ptr, s + start, len + 1);
-	ptr[len] = 0;
-	if (*ptr == 0)
+	lens = ft_strlen(s);
+	if (start >= lens)
+		return (ft_strdup(""));
+	sublen = lens - start;
+	if (len < sublen)
+		sublen = len;
+	ptr = malloc((sublen + 1));
+	if (!ptr)
 		return (NULL);
+	ft_memcpy(ptr, s + start, sublen);
+	ptr[sublen] = 0;
 	return (ptr);
 }
 

@@ -6,7 +6,7 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 11:33:23 by spitte            #+#    #+#             */
-/*   Updated: 2026/11/03 14:28:37 by spitte           ###   ########.fr       */
+/*   Updated: 2026/11/07 18:49:50 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,14 @@
 
 int	findpower(int n)
 {
-	int		order;
 	int		power;
 
 	if (n < 0)
 		n = -n;
-	order = 1;
 	power = 0;
-	while (n / 10 > order)
+	while (n >= 10)
 	{
-		order = order * 10;
+		n = n/10;
 		power++;
 	}
 	return (power);
@@ -48,19 +46,6 @@ int	power(int nb, int power)
 	return (res);
 }
 
-char	*allocate_space(int n)
-{
-	char	*str;
-
-	str = malloc(n);
-	if (!str)
-	{
-		free(str);
-		return (NULL);
-	}
-	return (str);
-}
-
 char	*ft_itoa(int n)
 {
 	int		neg;
@@ -69,11 +54,16 @@ char	*ft_itoa(int n)
 
 	i = 0;
 	if (n == 0)
-		return ("0");
+		return ((char *)"0");
 	if (n == -2147483648)
-		return ("-2147483648");
+		return ((char *)"-2147483648");
 	neg = (n < 0);
-	str = allocate_space(sizeof(char) * (neg + findpower(n) + 1));
+	str = malloc(sizeof(char) * (neg + findpower(n) + 2));
+	if (!str)
+	{
+		free(str);
+		return (NULL);
+	}
 	n = n * (1 - 2 * (n < 0));
 	if (neg)
 		str[0] = '-';
@@ -90,6 +80,9 @@ char	*ft_itoa(int n)
 //#include <stdio.h>
 //int main()
 //{
-//	printf("0: %s\n42: %s\n-42: %s\n2147483647: %s\n"
-//	,ft_itoa(0),ft_itoa(42),ft_itoa(-42),ft_itoa(2147483647));
+//	printf("findpower 1000 : %d \n",findpower(1000));
+//	printf("findpower 42 : %d \n",findpower(42));
+//	printf("findpower -2147483648 : %d \n",findpower(-2147483648));
+//	printf("0: %s\n42: %s\n-42: %s\n2147483647: %s\n",ft_itoa(0),
+//		ft_itoa(42),ft_itoa(-42),ft_itoa(2147483647));
 //}

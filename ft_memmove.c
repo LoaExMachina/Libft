@@ -6,7 +6,7 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 13:30:13 by spitte            #+#    #+#             */
-/*   Updated: 2026/11/06 17:43:03 by spitte           ###   ########.fr       */
+/*   Updated: 2026/11/07 10:06:46 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		}
 	}
 	else
-		ft_memcpy(dest,src,n);
+		ft_memcpy(dest, src, n);
 	return (dest);
 }
 

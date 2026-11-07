@@ -6,7 +6,7 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 11:04:44 by spitte            #+#    #+#             */
-/*   Updated: 2026/10/28 12:50:00 by spitte           ###   ########.fr       */
+/*   Updated: 2026/11/07 11:16:28 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,17 @@
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
+	unsigned char *s_1;
+	unsigned char *s_2;
 
+	s_1 = (unsigned char *)s1;
+	s_2 = (unsigned char *)s2;
+	
 	i = 0;
-	while ((s1[i] || s2[i]) && i < n)
+	while ((s_1[i] || s_2[i]) && i < n)
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+		if (s_1[i] != s_2[i])
+			return (s_1[i] - s_2[i]);
 		i++;
 	}
 	return (0);
