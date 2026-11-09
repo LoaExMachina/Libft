@@ -6,7 +6,7 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 12:14:49 by spitte            #+#    #+#             */
-/*   Updated: 2026/11/09 15:33:58 by spitte           ###   ########.fr       */
+/*   Updated: 2026/11/09 15:49:14 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char	*s;
 	unsigned char	*d;
 
-	if (dest == NULL)
-		return (NULL);
 	i = 0;
 	s = (unsigned char *) src;
 	d = (unsigned char *) dest;
