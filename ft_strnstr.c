@@ -6,7 +6,7 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/28 10:06:03 by spitte            #+#    #+#             */
-/*   Updated: 2026/11/07 13:04:48 by spitte           ###   ########.fr       */
+/*   Updated: 2026/11/09 14:17:50 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	i;
 	size_t	j;
 
-	if(!(little[0]))
-		return((char *)big);
+	if (!(little[0]))
+		return ((char *)big);
 	i = 0;
 	while (big[i] && i < len)
 	{

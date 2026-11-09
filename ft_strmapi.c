@@ -6,7 +6,7 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 14:41:21 by spitte            #+#    #+#             */
-/*   Updated: 2026/11/03 15:36:18 by spitte           ###   ########.fr       */
+/*   Updated: 2026/11/09 14:21:14 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		str[i] = f(i, ((char *)s)[i]);
 		i++;
 	}
+	str[i] = 0;
 	return (str);
 }
 

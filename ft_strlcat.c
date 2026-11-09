@@ -6,7 +6,7 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 16:29:36 by spitte            #+#    #+#             */
-/*   Updated: 2026/11/07 12:46:05 by spitte           ###   ########.fr       */
+/*   Updated: 2026/11/09 14:16:25 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		i++;
 	lend = i;
 	if (size <= lend)
-		return(size + lens);
+		return (size + lens);
 	while (src[j] && i < size -1)
 	{
 		dst[i] = src[j];
@@ -35,7 +35,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		j++;
 	}
 	dst[i] = 0;
-	return (lend  + lens);
+	return (lend + lens);
 }
 //#include <bsd/string.h>
 //#include <stdio.h>

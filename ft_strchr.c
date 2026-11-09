@@ -6,7 +6,7 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 09:53:49 by spitte            #+#    #+#             */
-/*   Updated: 2026/11/07 10:33:56 by spitte           ###   ########.fr       */
+/*   Updated: 2026/11/09 14:18:27 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strchr(const char *s, int c)
 		i++;
 	}
 	if (c == 0)
-		return((char *)s + i);
+		return ((char *)s + i);
 	return (NULL);
 }
 //#include <stdio.h>

@@ -6,7 +6,7 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 13:25:40 by spitte            #+#    #+#             */
-/*   Updated: 2026/11/06 14:22:31 by spitte           ###   ########.fr       */
+/*   Updated: 2026/11/09 12:49:49 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,16 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list	*current;
 	t_list	*previous;
 
 	if (lst)
 	{
-		current = lst[0];
-		while (current->next)
+		while (*lst)
 		{
-			previous = current;
-			current = current->next;
-			del (previous);
+			previous = (*lst);
+			*lst = (*lst)->next;
+			ft_lstdelone(previous, del);
 			free (previous);
 		}
-		lst = NULL;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 11:21:08 by spitte            #+#    #+#             */
-/*   Updated: 2026/11/07 17:54:30 by spitte           ###   ########.fr       */
+/*   Updated: 2026/11/09 11:38:55 by spitte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,13 @@ size_t	ft_countwords(char const *s, char c)
 
 	i = 0;
 	w = 1;
+	if (!s[0])
+		return (0);
+	if (!c)
+		return (1);
 	while (s[i])
 	{
-		if (s[i] == c && s[i - 1] && s[i - 1] != c)
+		if (s[i] == c && i != 0 && s[i - 1] && s[i - 1] != c)
 			w++;
 		i++;
 	}
@@ -44,7 +48,7 @@ size_t	ft_countletters(char const *s, char c, int n)
 	{
 		if (w == n && s[i] != c)
 			j++;
-		if (s[i] == c && s[i - 1] && s[i - 1] != c)
+		if (s[i] == c && i != 0 && s[i - 1] && s[i - 1] != c)
 			w++;
 		if (w > n)
 			break ;
@@ -91,11 +95,11 @@ char	**ft_split(char const *s, char c)
 	return (words);
 }
 
-//#include <stdio.h>
 //#include <assert.h>
+//#include <stdio.h>
 //int	main()
 //{
-//	char *a="xxxUnxspectrexxxhantexxxxlx'Europex";
+//	char *a="";
 //	char b = 'x';
 //	char **words = ft_split(a,b);
 //	int i = 0;

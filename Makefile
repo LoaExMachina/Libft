@@ -6,7 +6,7 @@
 #    By: spitte <spitte@student.42lehavre.fr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/10/29 13:27:26 by spitte            #+#    #+#              #
-#    Updated: 2026/11/06 15:23:12 by spitte           ###   ########.fr        #
+#    Updated: 2026/11/09 14:58:02 by spitte           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
-all: $(NAME) clean
+all: $(NAME)
 
 $(NAME): $(OFILES)
 	ar rcs $(NAME) $(OFILES)
